@@ -16,7 +16,28 @@ namespace FactoryMethod.Strategy
         {
             var commandBuilder = CommandBuilders.FirstOrDefault(dp => dp.Type == cardType);
 
+            ParallelNoWait();
+
+            Console.WriteLine("CalledCommandBuilder");
+
             return commandBuilder;
+        }
+
+        private Task ParallelNoWait()
+        {
+            Task.Run(async () =>
+            {
+                await PublishTask();
+
+                Console.WriteLine("Finished all");
+            });
+
+            return Task.CompletedTask;
+        }
+
+        private async Task PublishTask()
+        {
+            await Task.Delay(10000);
         }
     }
 }

@@ -46,7 +46,7 @@ Console.WriteLine("Card Created: {0}, {1}, {2}", cardCreated.Name, cardCreated.T
 
 Console.WriteLine("Card Created: {0}, {1}, {2}", platinumCreated.Name, platinumCreated.Type, platinumCreated.Number);
 
-Console.WriteLine("Card Created: {0}, {1}, {2}", inexistentCardCreated.Name, inexistentCardCreated.Type, inexistentCardCreated.Number);
+//Console.WriteLine("Card Created: {0}, {1}, {2}", inexistentCardCreated.Name, inexistentCardCreated.Type, inexistentCardCreated.Number);
 
 Console.ReadLine();
 host.Run();
